@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link href="CSS/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <h2>Manful's To Do App</h2>
+    <div id="todo-enter">
+        <form id="enter-container">
+            <div id="input">
+                <input type="text" id="todo" placeholder="my schedule">
+                <button type="submit" id="btn" value="submit">
+                    <i id="add" class="fas fa-plus-square"></i>
+                </button>
+            </div>
+            <div id="task-box">
+                <div class="todo-task">
+                    <h1>Create a task </h1>
+                    <div id="add-task">
+                        <label for="newTaskName"><i class="fas fa-laptop-house"></i>Task</label>
+                        <input type="text" name="task" placeholder="put your task here"/>
+
+                        <label for="newTagName"><i class="fas fa-tags"></i>Tag</label>
+                        <textarea id="tag"  name="description"> </textarea>
+                    
+                        <label for="newPriority"><i class="fas fa-clipboard-list"></i>Priority</label>
+                        <select name="dropdown" id="dropdown">
+                           <option disabled selected value>your priority</option>
+                           <option value="low">Low </option>
+                           <option value="medium">Medium </option>
+                           <option value="high">High</option>
+                        </select>
+                    </div>
+                    <div class="btnCancel" >
+                        <p id="cancel"> X </p>
+                    </div>
+
+                    <div id="button">
+                        <button type="submit" class="btnCreate" id="create">Create Task </button> 
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+  <script src="app.js"></script>  
+</body>
+</html>
