@@ -1,0 +1,121 @@
+html, body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, 'Ubuntu', Cantarell, Open Sans, 'Helvetica Neue', sans-serif;
+}
+
+#todo-task {
+  width: 38%;
+  height: 70%;
+  background-color: rosybrown;
+  margin-top: 60px;
+  position: absolute;
+  z-index: 90;
+}
+
+#todo-task label {
+  display: block;
+  margin-bottom: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  border: 3px;
+  border-radius: 2px;
+}
+
+span {
+  padding: 0px 19px 3px 20px;
+  text-align: center;
+  color: aliceblue;
+  margin-left: 467px;
+  background-color: #5a5555;
+  margin-right: 500px;
+  top: -86px;
+  font-size: 1.4em;
+  position: relative;
+}
+
+span:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
+/* css for newTask list */
+.list-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 10px;
+  background-color: var(--primary-dark);
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  font-size: 0.85em;
+  color: var(--bc-wht);
+  -webkit-transition: var(--ease);
+  transition: var(--ease);
+}
+
+.list-item:hover {
+  background-color: #f7f7f71a;
+  -webkit-transition: var(--ease);
+  transition: var(--ease);
+}
+
+.list-item-type {
+  padding: 3px 11px;
+  border-radius: 100px;
+  background-color: #ffda6d;
+  color: var(--primary-dark);
+  font-size: 0.84em;
+}
+
+.list-item-value {
+  width: 200px;
+}
+
+.list-item-remove {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.list-item-remove:hover {
+  color: #ff4646;
+  cursor: pointer;
+}
+
+h1 {
+  text-align: center;
+}
+
+#create {
+  position: absolute;
+  top: 380px;
+}
+
+.disable-modal {
+  visibility: visible;
+}
+
+.enable-modal {
+  visibility: hidden;
+}
+/*# sourceMappingURL=style.css.map */
