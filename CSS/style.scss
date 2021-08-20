@@ -1,14 +1,89 @@
 html, body {
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, 'Ubuntu', Cantarell, Open Sans, 'Helvetica Neue', sans-serif
 }
+body {
+	background-image: url("/Do-It-List/images/background.jpg");
+  }
 #todo-task {
-    width: 38%;
-    height: 70%;
+    width: 30%;
+    height: 80%;
     background-color: rosybrown;
-    margin-top: 60px;
+    margin-top: -80px;
     position: absolute;
     z-index: 90;
+	margin-left: 460px;
 }
+.circle1{
+	width: 100px;
+	height: 100px;
+	border-radius:50%;
+	position:fixed;
+	background-color:red;
+	
+	/*center it*/
+	margin-left: -25px;
+	margin-top: -25px;
+  }
+  
+  .move-1{
+	 animation: rombus 15s linear 0s infinite;
+  }
+  
+  @keyframes rombus{
+	 0%{left:50%;top:0}
+	 25%{left:100%;top:50%}
+	 50%{left:50%;top:100%}
+	 75%{left:0;top:50%}
+	 100%{left:50%;top:0}
+  }
+
+.circle2{
+	width: 150px;
+	height: 150px;
+	border-radius:50%;
+	position:fixed;
+	background-color:rgb(0, 255, 221);
+	
+	/*center it*/
+	margin-left: -25px;
+	margin-top: -25px;
+  }
+  
+  .move-2{
+	 animation: rombus 30s linear 0s infinite;
+  }
+  
+  @keyframes rombus{
+	 0%{left:50%;top:0}
+	 25%{left:100%;top:50%}
+	 50%{left:50%;top:100%}
+	 75%{left:0;top:50%}
+	 100%{left:50%;top:0}
+  }
+
+.circle3{
+	width: 150px;
+	height: 150px;
+	border-radius:50%;
+	position:fixed;
+	background-color:rgb(175, 30, 127);
+	
+	/*center it*/
+	margin-left: -25px;
+	margin-top: -25px;
+  }
+  
+  .move-3{
+	 animation: rombus 10s linear 0s infinite;
+  }
+  
+  @keyframes rombus{
+	 0%{left:50%;top:0}
+	 25%{left:100%;top:50%}
+	 50%{left:50%;top:100%}
+	 75%{left:0;top:50%}
+	 100%{left:50%;top:0}
+  }   
 #todo-task label {
     display: block;
     margin-bottom: 15px;
@@ -18,14 +93,18 @@ html, body {
     border: 3px;
     border-radius: 2px;
 }
+#btn {
+	font-size: 1.4em;
+	margin-left: 41%;
+}
 span {
     padding: 0px 19px 3px 20px;
     text-align: center;
     color: aliceblue;
-    margin-left: 467px;
+    margin-left: 353px;
     background-color: rgb(90, 85, 85);
     margin-right: 500px;
-    top: -86px;
+    top: -47px;
     font-size: 1.4em;
     position: relative;
 }
@@ -34,12 +113,18 @@ span:hover {
     cursor:pointer;
 }
 /* css for newTask list */
-
 .list {
 	&-flex {
 		display: flex;
+		top: 190px;
 		flex-direction: column;
+		width: 65%;
+		height: 100%;
+		margin-left: 18%;
+		position:absolute;
+		background-color: #bd84d8;
 	}
+	
 	&-item {
 		display: flex;
 		flex-direction: row;
@@ -54,9 +139,15 @@ span:hover {
 		color: var(--bc-wht);
 		transition: var(--ease);
 
+		& {
+			width: 90%;
+			margin-top: 10px;
+			margin-left: 44px;
+		}
 		&:hover {
-			background-color: #f7f7f71a;
+			background-color: rgb(126, 207, 187);
 			transition: var(--ease);
+
 		}
 
 		&-type {
@@ -73,15 +164,18 @@ span:hover {
 			display: flex;
 
 			&:hover {
-				color: #ff4646;
+				color: #fa0000;
 				cursor: pointer;
 			}
 		}
 	}
 }
 
-h1 {
+h2 {
     text-align: center;
+}
+p {
+	text-align: center;
 }
 #create
 {
