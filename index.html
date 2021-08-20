@@ -5,26 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="CSS/style.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>  
 <body>
-    <h2>Manful's To Do App</h2>
+    <div class="circle1 move-1"></div>
+    <div class="circle2 move-2"></div>
+    <div class="circle3 move-3"></div>
+    <h2> DO-IT App</h2>
     <div id="todo-enter">
         <form id="enter-container">
             <div id="input">
-                <input type="text" id="todo" placeholder="my schedule">
-                <button type="submit" id="btn" value="submit">
-                    <i id="add" class="fas fa-plus-square"></i>
+            <p><strong>Do-It-List</strong> is an App which helps users to list out the tasks  you need to complete or things that you want to do.<br>
+                This app helps you not forget anything important.</p>
+                <button type="submit" id="btn" class="btn btn-info" value="submit">
+                    Add a task to begin <i id="add" class="fas fa-plus-square"></i>
                 </button>
         <!---New Task generated--->
         <div class="dashboard-right">
-            <div class="right-list">
-                <h3 class="right-list-h3"></h3>
+            <div class="center-list">
+                <h3 class="center-list-h3"></h3>
                 <div class="list-flex">
                     <!-- <span class="list-item">
                         <span class="list-item-value">Finish Javascript course</span>
@@ -37,7 +44,7 @@
             </div>
             <div class="enable-modal" id="backdrop"></div>
             <div class="disable-modal" id="todo-task">
-                <h1>Create a task </h1>
+                <h2>Create a task </h2>
                     <span> X </span>
                         <label for="newTaskName"><i class="fas fa-laptop-house"></i>Task</label>
                         <input type="text" id="newTaskName" placeholder="put your task here"/>
