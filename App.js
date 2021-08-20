@@ -1,35 +1,39 @@
 window.onload = () => {
 
-const createTask = document.querySelector('.create-task');
-const input = document.getElementById('newTaskName');
-const type = document.getElementById('newTagName');
-const listValue = document.querySelector('.list-item-value');
-const list = document.querySelector('.list-flex');
-const listHdr = document.querySelector(".right-list-h3");
+ const createTask = document.querySelector('.create-task');
+ const input = document.getElementById('newTaskName');
+ const type = document.getElementById('newTagName');
+ const listValue = document.querySelector('.list-item-value');
+ const list = document.querySelector('.list-flex');
+ const listHdr = document.querySelector(".center-list-h3");
 
 
-let typeBC = ["#ffecb5", "#e2bbff", "#b6ffee", "#ffb4c0", "#bbfaff"];
-let typeCurrentC = [];
-let slate = [];
-let localData = localStorage.getItem("slate");
-if (localData) {
-	slate = JSON.parse(localStorage.getItem("slate"));
-	if (slate.length == 0) {
+ let typeBC = ["#ffecb5", "#e2bbff", "#b6ffee", "#ffb4c0", "#bbfaff"];
+ let typeCurrentC = [];
+ let slate = [];
+ let localData = localStorage.getItem("slate");
+   if (localData) {
+	  slate = JSON.parse(localStorage.getItem("slate"));
+	   if (slate.length == 0) {
 		listHdr.innerHTML = "Add a task to begin.";
-	} else {
+	    }  
+	   else {
 		maker();
-		listHdr.innerHTML = "Up coming task.";
-	}
-}
+		//listHdr.innerHTML = "";
+	    }
+    }
 
-createTask.addEventListener("click", addToList);
-function addToList() {
+  createTask.addEventListener("click", addToList);
+   function addToList() {
 	const inputType = type.value;
 	const inputValue = input.value;
 	const typeColor = typeBC[Math.floor(Math.random() * typeBC.length)];
 	if (inputValue === "" || inputType === "") {
-		return alert("enter value");
+		return alert(" please, enter input");
 	}
+	else {
+		this.parentElement.remove();
+	  }
 	const obj = {
 		value: inputValue,
 		type: inputType,
@@ -41,10 +45,10 @@ function addToList() {
 	type.value = "";
 	createList(obj, val);
 	input.focus();
-	listHdr.innerHTML = "Up coming task.";
+	//listHdr.innerHTML = "Up coming task.";
 	maker();
 	localStorage.setItem("slate", JSON.stringify(slate));
-}
+ }
 function maker() {
 	list.innerHTML = "";
 	slate.forEach((element, index) => {
@@ -88,7 +92,6 @@ function createList(el, indx) {
 		});
 	};
 	localStorage.setItem("slate", JSON.stringify(slate));
-}
 
     
     let span = document.querySelector('span');
@@ -109,7 +112,4 @@ function createList(el, indx) {
           }
 
     });
-
-
-
-
+}
