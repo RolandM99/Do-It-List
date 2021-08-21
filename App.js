@@ -1,6 +1,6 @@
 window.onload = () => {
 
- const createTask = document.querySelector('.create-task');
+ const createTask = document.getElementById('create-task');
  const input = document.getElementById('newTaskName');
  const type = document.getElementById('newTagName');
  const listValue = document.querySelector('.list-item-value');
@@ -15,7 +15,7 @@ window.onload = () => {
    if (localData) {
 	  slate = JSON.parse(localStorage.getItem("slate"));
 	   if (slate.length == 0) {
-		listHdr.innerHTML = "Add a task to begin.";
+		//listHdr.innerHTML = "Add a task to begin.";
 	    }  
 	   else {
 		maker();
