@@ -1,19 +1,54 @@
 html, body {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, 'Ubuntu', Cantarell, Open Sans, 'Helvetica Neue', sans-serif;
+  font-family: 'Balsamiq Sans', cursive;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Patrick Hand', cursive;
 }
 
 body {
-  background-image: url("/Do-It-List/images/background.jpg");
+  background-image: url("/images/background.jpg");
+}
+
+#title {
+  margin-top: 20px;
+  font-size: 2.8em;
+  text-align: center;
+  font-weight: bold;
+}
+
+@media (max-width: 778px) and (min-width: 360px) {
+  #title {
+    text-align: center;
+    font-size: 3em;
+  }
+}
+
+p {
+  font-size: 1.5em;
+}
+
+@media (max-width: 778px) and (min-width: 360px) {
+  p {
+    font-size: 1.7em;
+  }
 }
 
 #todo-task {
   width: 30%;
   height: 80%;
-  background-color: rosybrown;
-  margin-top: -80px;
+  background: #020024;
+  background: radial-gradient(circle, #020024 0%, rgba(201, 115, 224, 0.98083) 20%, #00d4ff 100%);
+  margin-top: -130px;
   position: absolute;
-  z-index: 90;
-  margin-left: 460px;
+  z-index: 30;
+  margin-left: 444px;
+}
+
+@media (max-width: 778px) and (min-width: 360px) {
+  #todo-task {
+    margin-top: -330px;
+    margin-left: -10px;
+    width: 120%;
+  }
 }
 
 .circle1 {
@@ -21,7 +56,10 @@ body {
   height: 100px;
   border-radius: 50%;
   position: fixed;
-  background-color: red;
+  background: #020024;
+  background: -webkit-gradient(linear, left top, right top, from(#020024), color-stop(35%, #090979), to(#00d4ff));
+  background: linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 100%);
+  opacity: 0.7;
   /*center it*/
   margin-left: -25px;
   margin-top: -25px;
@@ -83,7 +121,10 @@ body {
   height: 150px;
   border-radius: 50%;
   position: fixed;
-  background-color: #00ffdd;
+  background: #2e002a;
+  background: -webkit-gradient(linear, left top, right top, color-stop(-10%, #2e002a), color-stop(35%, #b4398f), to(#8765b4));
+  background: linear-gradient(90deg, #2e002a -10%, #b4398f 35%, #8765b4 100%);
+  opacity: 0.5;
   /*center it*/
   margin-left: -25px;
   margin-top: -25px;
@@ -122,7 +163,10 @@ body {
   height: 150px;
   border-radius: 50%;
   position: fixed;
-  background-color: #af1e7f;
+  background: #460012;
+  background: -webkit-gradient(linear, left top, right top, from(#460324), color-stop(35%, #ff5bba), to(#ffb4d1));
+  background: linear-gradient(90deg, #460324 0%, #ff5bba 35%, #ffb4d1 100%);
+  opacity: 0.5;
   /*center it*/
   margin-left: -25px;
   margin-top: -25px;
@@ -158,17 +202,29 @@ body {
 
 #todo-task label {
   display: block;
-  margin-bottom: 15px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  margin-top: 15px;
   width: 100%;
+  margin-left: 5px;
   border: 3px;
   border-radius: 2px;
+  font-size: 1.2em;
+}
+
+@media (max-width: 778px) and (min-width: 360px) {
+  #todo-task label {
+    font-size: 1.8em;
+  }
 }
 
 #btn {
   font-size: 1.4em;
   margin-left: 41%;
+}
+
+@media (max-width: 778px) and (min-width: 360px) {
+  #btn {
+    margin-left: 24%;
+  }
 }
 
 span {
@@ -183,9 +239,76 @@ span {
   position: relative;
 }
 
+@media (max-width: 778px) and (min-width: 360px) {
+  span {
+    top: -57px;
+  }
+}
+
 span:hover {
   background-color: red;
   cursor: pointer;
+}
+
+#newTaskName {
+  padding-right: 190px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 1.2em;
+}
+
+@media (max-width: 778px) and (min-width: 360px) {
+  #newTaskName {
+    padding-right: 75px;
+    margin-left: 15px;
+    font-size: 1.8em;
+  }
+}
+
+#newTagName {
+  padding-right: 190px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 1.2em;
+}
+
+@media (max-width: 778px) and (min-width: 360px) {
+  #newTagName {
+    padding-right: 75px;
+    margin-left: 15px;
+    font-size: 1.8em;
+  }
+}
+
+#newPriority {
+  padding-right: 280px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 1.2em;
+}
+
+@media (max-width: 778px) and (min-width: 360px) {
+  #newPriority {
+    font-size: 1.6em;
+    padding-right: 226px;
+    margin-left: 15px;
+  }
+}
+
+#create-task {
+  padding-left: 80px;
+  margin-left: 85px;
+  padding-right: 80px;
+}
+
+@media (max-width: 778px) and (min-width: 360px) {
+  #create-task {
+    font-size: 2em;
+    padding-right: 20px;
+    margin-left: 113px;
+    padding-left: 20px;
+    margin-top: -28px;
+  }
 }
 
 /* css for newTask list */
@@ -193,7 +316,7 @@ span:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  top: 190px;
+  top: 250px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -203,6 +326,14 @@ span:hover {
   margin-left: 18%;
   position: absolute;
   background-color: #bd84d8;
+}
+
+@media (max-width: 778px) and (min-width: 360px) {
+  .list-flex {
+    margin-top: 120px;
+    width: 100%;
+    margin-left: 0%;
+  }
 }
 
 .list-item {
@@ -223,16 +354,30 @@ span:hover {
   background-color: var(--primary-dark);
   margin-bottom: 0.5rem;
   border-radius: 6px;
-  font-size: 0.85em;
+  font-size: 1.5em;
   color: var(--bc-wht);
   -webkit-transition: var(--ease);
   transition: var(--ease);
+}
+
+@media (max-width: 778px) and (min-width: 360px) {
+  .list-item {
+    font-size: 1.8em;
+  }
 }
 
 .list-item {
   width: 90%;
   margin-top: 10px;
   margin-left: 44px;
+  height: 12%;
+}
+
+@media (max-width: 778px) and (min-width: 360px) {
+  .list-item {
+    height: 8%;
+    margin-left: 20px;
+  }
 }
 
 .list-item:hover {
@@ -246,7 +391,13 @@ span:hover {
   border-radius: 100px;
   background-color: #ffda6d;
   color: var(--primary-dark);
-  font-size: 0.84em;
+  margin-left: -140px;
+}
+
+@media (max-width: 778px) and (min-width: 360px) {
+  .list-item-type {
+    padding: 0px 13px;
+  }
 }
 
 .list-item-value {
@@ -264,17 +415,22 @@ span:hover {
   cursor: pointer;
 }
 
-h2 {
+#taskk {
   text-align: center;
+}
+
+@media (max-width: 778px) and (min-width: 360px) {
+  #taskk {
+    text-align: center;
+    font-size: 1.8em;
+    margin-top: 14px;
+    font-weight: bolder;
+    margin-left: -70px;
+  }
 }
 
 p {
   text-align: center;
-}
-
-#create {
-  position: absolute;
-  top: 380px;
 }
 
 .disable-modal {

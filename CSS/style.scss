@@ -1,24 +1,51 @@
 html, body {
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, 'Ubuntu', Cantarell, Open Sans, 'Helvetica Neue', sans-serif
+	font-family: 'Balsamiq Sans', cursive;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Patrick Hand', cursive;
 }
 body {
-	background-image: url("/Do-It-List/images/background.jpg");
+	background-image: url("/images/background.jpg");
   }
+#title {
+	margin-top: 20px;
+	font-size: 2.8em;
+	text-align: center;
+	font-weight: bold;
+	@media (max-width:778px) and (min-width:360px) {
+		text-align: center;
+		font-size: 3em;
+	}
+}
+p {
+	font-size: 1.5em;
+	@media (max-width:778px)and (min-width:360px) {
+		font-size: 1.7em;
+		
+	}
+}
 #todo-task {
     width: 30%;
     height: 80%;
-    background-color: rosybrown;
-    margin-top: -80px;
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(201,115,224,0.9808298319327731) 20%, rgba(0,212,255,1) 100%);
+    margin-top: -130px;
     position: absolute;
-    z-index: 90;
-	margin-left: 460px;
+    z-index: 30;
+	margin-left: 444px;
+	@media (max-width:778px) and (min-width:360px) {
+		margin-top: -330px;
+		margin-left: -10px;
+		width: 120%;
+	}
 }
 .circle1{
 	width: 100px;
 	height: 100px;
 	border-radius:50%;
 	position:fixed;
-	background-color:red;
+	background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+	opacity: 0.7;
 	
 	/*center it*/
 	margin-left: -25px;
@@ -42,7 +69,9 @@ body {
 	height: 150px;
 	border-radius:50%;
 	position:fixed;
-	background-color:rgb(0, 255, 221);
+	background: rgb(46, 0, 42);
+    background: linear-gradient(90deg, rgb(46, 0, 42) -10%, rgb(180, 57, 143) 35%, rgb(135, 101, 180) 100%);
+	opacity: 0.5;
 	
 	/*center it*/
 	margin-left: -25px;
@@ -66,7 +95,9 @@ body {
 	height: 150px;
 	border-radius:50%;
 	position:fixed;
-	background-color:rgb(175, 30, 127);
+	background: rgb(70, 0, 18);
+    background: linear-gradient(90deg, rgb(70, 3, 36) 0%, rgb(255, 91, 186) 35%, rgb(255, 180, 209) 100%);
+	opacity: 0.5;
 	
 	/*center it*/
 	margin-left: -25px;
@@ -83,19 +114,26 @@ body {
 	 50%{left:50%;top:100%}
 	 75%{left:0;top:50%}
 	 100%{left:50%;top:0}
-  }   
+  }
+ 
 #todo-task label {
     display: block;
-    margin-bottom: 15px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    margin-top: 15px;
     width: 100%;
+	margin-left: 5px;
     border: 3px;
     border-radius: 2px;
+	font-size: 1.2em;
+	@media(max-width:778px) and (min-width:360px) {
+		font-size: 1.8em;
+	}
 }
 #btn {
 	font-size: 1.4em;
 	margin-left: 41%;
+	@media (max-width:778px) and (min-width:360px) {
+		margin-left: 24%;
+	}
 }
 span {
     padding: 0px 19px 3px 20px;
@@ -107,23 +145,80 @@ span {
     top: -47px;
     font-size: 1.4em;
     position: relative;
+	@media (max-width:778px) and (min-width:360px) {
+		top: -57px;
+	}
 }
 span:hover {
     background-color: red;
     cursor:pointer;
 }
+#newTaskName {
+	padding-right: 190px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	font-size: 1.2em;
+	@media (max-width:778px) and (min-width:360px) {
+		padding-right: 75px;
+		margin-left: 15px;
+		font-size: 1.8em;
+	}
+}
+#newTagName {
+	padding-right: 190px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	font-size: 1.2em;
+	@media (max-width:778px) and (min-width:360px) {
+		padding-right: 75px;
+		margin-left: 15px;
+		font-size: 1.8em;
+	}
+
+}
+#newPriority {
+	padding-right: 280px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	font-size: 1.2em;
+	@media (max-width:778px) and (min-width:360px) {
+		font-size: 1.6em;
+		padding-right: 226px;
+		margin-left: 15px;
+	}
+
+}
+#create-task {
+	padding-left: 80px;
+	margin-left: 85px;
+	padding-right: 80px;
+	@media (max-width:778px) and (min-width:360px) {
+		font-size: 2em;
+		padding-right: 20px;
+		margin-left: 113px;
+		padding-left: 20px;
+		margin-top: -28px;
+	}
+}
+
 /* css for newTask list */
 .list {
 	&-flex {
 		display: flex;
-		top: 190px;
+		top: 250px;
 		flex-direction: column;
 		width: 65%;
 		height: 100%;
 		margin-left: 18%;
 		position:absolute;
 		background-color: #bd84d8;
+		@media (max-width:778px) and (min-width:360px) {
+			margin-top: 120px;
+			width: 100%;
+			margin-left: 0%;
+		}
 	}
+		
 	
 	&-item {
 		display: flex;
@@ -135,14 +230,22 @@ span:hover {
 		background-color: var(--primary-dark);
 		margin-bottom: 0.5rem;
 		border-radius: 6px;
-		font-size: 0.85em;
+		font-size: 1.5em;
 		color: var(--bc-wht);
 		transition: var(--ease);
+		@media (max-width:778px) and (min-width:360px) {
+			font-size: 1.8em;
+		}
 
 		& {
 			width: 90%;
 			margin-top: 10px;
 			margin-left: 44px;
+			height: 12%;
+			@media (max-width:778px) and (min-width:360px) {
+				height: 8%;
+				margin-left: 20px;
+			}
 		}
 		&:hover {
 			background-color: rgb(126, 207, 187);
@@ -155,7 +258,10 @@ span:hover {
 			border-radius: 100px;
 			background-color: #ffda6d;
 			color: var(--primary-dark);
-			font-size: 0.84em;
+			margin-left: -140px;
+			@media (max-width:778px) and  (min-width:360px) {
+		        padding: 0px 13px;
+			}
 		}
 		&-value {
 			width: 200px;
@@ -171,17 +277,20 @@ span:hover {
 	}
 }
 
-h2 {
+#taskk {
     text-align: center;
+	@media (max-width:778px) and (min-width:360px) {
+		text-align: center;
+		font-size: 1.8em;
+		margin-top: 14px;
+		font-weight: bolder;
+		margin-left: -70px;
+	}
 }
 p {
 	text-align: center;
 }
-#create
-{
-    position:absolute;
-    top: 380px;
-}
+
 .disable-modal {
     visibility: visible;
 }
