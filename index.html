@@ -10,7 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
 
     <link href="CSS/style.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&family=Open+Sans&family=Patrick+Hand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
     integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -19,7 +21,7 @@
     <div class="circle1 move-1"></div>
     <div class="circle2 move-2"></div>
     <div class="circle3 move-3"></div>
-    <h2> DO-IT App</h2>
+    <h2 id="title"> DO-IT App</h2>
     <div id="todo-enter">
         <form id="enter-container">
             <div id="input">
@@ -28,6 +30,7 @@
                 <button type="submit" id="btn" class="btn btn-info" value="submit">
                     Add a task to begin <i id="add" class="fas fa-plus-square"></i>
                 </button>
+            </div>    
         <!---New Task generated--->
         <div class="dashboard-right">
             <div class="center-list">
@@ -44,7 +47,7 @@
             </div>
             <div class="enable-modal" id="backdrop"></div>
             <div class="disable-modal" id="todo-task">
-                <h2>Create a task </h2>
+                <h2 id="taskk">Create a task </h2>
                     <span> X </span>
                         <label for="newTaskName"><i class="fas fa-laptop-house"></i>Task</label>
                         <input type="text" id="newTaskName" placeholder="put your task here"/>
@@ -58,10 +61,12 @@
                            <option value="low">Low </option>
                            <option value="medium">Medium </option>
                            <option value="high">High</option>
-                        </select>
-                    <button class="create-task">Create Task </button> 
+                        </select><br><br><br>
+    
+                  <button type="button"  class="btn btn-secondary" id="create-task">Create Task </button> 
+                    
             </div>
-
+        </div>
         </form>
     </div>
   <script src="App.js"></script>  
